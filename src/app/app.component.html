@@ -1,0 +1,42 @@
+<header>
+  <nav class="fixed-nav-bar">
+    <div class="container">
+      <div class="nav-content" [dir]="getDirection()">
+        <div>
+          <p class="logo">{{'GYM' | translate}}</p>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-select [(value)]="selectedLang" (selectionChange)="onLangChange($event.value)">
+              <mat-option *ngFor="let lang of langList" [value]="lang.value" >
+                {{ lang.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="main-container">
+  <div class="side-nav" [dir]="getDirection()">
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened>
+        <p class="menu-item">{{'Dashboard' | translate}}</p>
+        <p class="menu-item">{{'Item' | translate}}</p>
+        <p class="menu-item">{{'PayIn' | translate}}</p>
+        <p class="menu-item">{{'PayOut' | translate}}</p>
+        <p class="menu-item">{{'Report' | translate}}</p>
+        <p class="menu-item">{{'Setting' | translate}}</p>
+      </mat-drawer>
+      <mat-drawer-content>
+        <div class="books-gallery">
+          <ng-container *ngFor="let book of books">
+            <app-card [name]="book.name"></app-card>
+          </ng-container>
+        </div>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,75 @@
+.fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgb(3 27 78 / 10%) 0px 2px 4px;
+
+  }
+
+  .container {
+    margin: 0px 2rem 0px 2rem;
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+.logo {
+  font-size: large;
+  font-weight: 500;
+  color: rgb(6, 135, 248);
+}
+
+p{
+  margin: 0px;
+}
+
+
+.main-container {
+  width: 100%;
+  height: 100%;
+}
+
+.side-nav {
+  width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background: #F0F0F0;
+    padding-top: 60px;
+    transition: all .3s;
+
+}
+
+.example-container {
+  height: 100%;
+}
+
+.menu-item {
+  padding: 14px 24px 14px 66px;
+  color: #2c345e !important;
+  border: 1px solid #f4efef;
+}
+
+.mat-drawer {
+  width: 20%;
+}
+
+mat-drawer-content {
+  padding: 20px;
+}
+
+.books-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
